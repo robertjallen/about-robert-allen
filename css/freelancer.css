@@ -10,10 +10,7 @@ body {
 p {
   font-size: 20px;
 }
-img #weather{
- max-height: 650px;
- overflow: hidden;    
-} 
+
 p.small {
   font-size: 16px;
 }
