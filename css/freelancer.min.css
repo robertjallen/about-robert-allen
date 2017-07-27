@@ -5,7 +5,8 @@
  */body{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;overflow-x:hidden}p{font-size:20px}p.small{font-size:16px}a,a.active,a:active,a:focus,a:hover{color:#18BC9C;outline:0}h1,h2,h3,h4,h5,h6{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase;font-weight:700}hr.star-light,hr.star-primary{padding:0;border:none;border-top:solid 5px;text-align:center;max-width:250px;margin:25px auto 30px}hr.star-light:after,hr.star-primary:after{content:"\f005";font-family:FontAwesome;display:inline-block;position:relative;top:-.8em;font-size:2em;padding:0 .25em}.navbar-custom,header .intro-text .name{font-family:Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;text-transform:uppercase}hr.star-light{border-color:#fff}hr.star-light:after{background-color:#18BC9C;color:#fff}hr.star-primary{border-color:#2C3E50}hr.star-primary:after{background-color:#fff;color:#2C3E50}.navbar-custom .navbar-brand,.navbar-custom .navbar-brand.active,.navbar-custom .navbar-brand:active,.navbar-custom .navbar-brand:focus,.navbar-custom .navbar-brand:hover,.navbar-custom .navbar-nav li a,header{color:#fff}.img-centered{margin:0 auto}
 
 header{
-	text-align:center;background:url("https://images.unsplash.com/photo-1473447216727-44efba8cf0e0?");
+	text-align:center;
+	background:url("https://images.unsplash.com/photo-1473447216727-44efba8cf0e0?");
 	background-size:cover;
 	height:800px; 
 }
@@ -145,18 +146,53 @@ header .intro-text .skills{font-size:1.25em;font-weight:300}@media (min-width:76
 	section.first{
 		padding-top:75px
 	}
-	.school{
-		max-height:140px;
+	/*#freeCodeCamp{
+		 max-height: 90px;
 	}
+	#udemy{
+		 max-height: 90px;
+	}
+	#charity{
+		 max-height: 90px;
+	}*/
+	.school-row{
+		max-height: 90px;
+	}
+	
 }
 
-.school{
-	width: 80%;
+.school-row{
+	background-color: aqua;
+	width: 585px;
 	margin: 0 auto;
-	max-height: 200px;
 }
-.schools{
-	background-color: #18BC9C;
+#freeCodeCamp{
+  background-image: url("/img/portfolio/freeCode.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;	
+  padding: 5px;
+  border-radius: 5px;	
+  height: 190px;	
+  max-width: 100%;
+  margin: 0 auto;	
+}
+#udemy{
+  background-image: url("/img/portfolio/udemy.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5px;
+  border-radius: 5px;	
+  height: 190px;
+  max-width: 100%;		
+}
+#charity{
+  background-image: url("/img/portfolio/charity.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5px;
+  border-radius: 5px;	
+  height: 190px;
+  max-width: 100%;	
 }
 #portfolio .portfolio-item {margin:0 0 15px;right:0}
 #portfolio .portfolio-item .portfolio-link {display:block;position:relative;max-width:400px;margin:0 auto}
