@@ -158,22 +158,27 @@ header .intro-text .skills{font-size:1.25em;font-weight:300}@media (min-width:76
 	.school-row{
 		max-height: 90px;
 	}
-	
+	.school-row img{
+		max-height: 90px;
+	}
 }
 
 .school-row{
 	width: 585px;
 	margin: 0 auto;
 }
+.school-row img{
+		margin: 0 auto;
+	}
 #freeCodeCamp{
-  background: url("img/portfolio/freeCode.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;	
-  padding: 5px;
-  border-radius: 5px;	
-  height: 190px;	
-  max-width: 100%;
+  padding: 5px;	
   margin: 0 auto;	
+}
+#freeCodeCamp img{
+	display: block;
+	margin: 0 auto;
+	height: 190px;
+	max-width: 100%;
 }
 #udemy{
   background-image: url("/img/portfolio/udemy.jpg");
