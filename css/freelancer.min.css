@@ -166,7 +166,7 @@ header .intro-text .skills{font-size:1.25em;font-weight:300}@media (min-width:76
 	margin: 0 auto;
 }
 #freeCodeCamp{
-  background: url("/img/portfolio/freeCode.jpeg");
+  background: url("img/portfolio/freeCode.jpeg");
   background-repeat: no-repeat;
   background-size: cover;	
   padding: 5px;
