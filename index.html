@@ -368,7 +368,7 @@
                 </div>            
                 </div> <!--container  -->
     </section> <!--section-->
-
+<div id="map"></div>
     <!-- About Section -->
     <section class="success" id="about">
         <div class="container">
@@ -380,10 +380,10 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>Hi, I'm Robert. <br>I'm a full-time student of full-stack Web development and Software engineering. I'm a Tech enthusiast, and stay at home dad where I homeshcool my son. I might be addicted to learning new things and love doing small electronic and tech projects with my son.</p>
+                    <p>Hi, I'm Robert. <br>I'm a full-time student of Web and Software development. I'm also a tech enthusiast, and stay at home dad where I homeshcool my son. I might be addicted to learning new things and love doing small electronic and tech projects with my son.</p>
                 </div>
                 <div class="col-lg-4">
-                    <p>Most of my time is spent on: FreeCodeCamp, CodeCademy, SoloLearn, Udemy, and CodeSchool. I work on projects and practice skills needed, like being intimate with Git, version control, and crossbrowser combatability.</p>
+                    <p>Most of my time is spent on: FreeCodeCamp, CodeCademy, Udemy, and CodeSchool. </p>
                 </div>
                 
             </div>
@@ -445,15 +445,16 @@
         </div>
     </section>
 
-    <!-- Footer -->
+<!--     Footer -->
     <footer class="text-center">
         <div class="footer-above">
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
                         <h3>Location</h3>
-                        <p>Greater
-                            <br>Detroit area</p>
+						<p>Greater Detroit Area, MI</p>
+                   
+                     <div id="map"></div>
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Around the Web</h3>
@@ -492,7 +493,7 @@
         </div>
     </footer>
 
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) 
     <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
         <a class="btn btn-primary" href="#page-top">
             <i class="fa fa-chevron-up"></i>
@@ -1129,9 +1130,14 @@
         </div>
     </div>
    
-   
-   
+    <!-- my-map google api   -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEdLsJesCMNaf0xgc-vOM8vNcarfyfvQ4&callback=initMap">		
+    </script>
     <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    
+    <!-- map -->
     <script src="vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
@@ -1146,6 +1152,80 @@
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
+    
+    <script>function initMap(){
+      // Map options
+      var options = {
+        zoom:9,
+        center:{lat:42.4969805,lng:-82.8888054}
+      }
+
+      // New map
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      // Listen for click on map
+      google.maps.event.addListener(map, 'click', function(event){
+        // Add marker
+        addMarker({coords:event.latLng});
+      });
+
+      
+      // Add marker
+      var marker = new google.maps.Marker({
+        position:{lat:42.4969805,lng:-82.8888054},
+        map:map,
+       
+      });
+
+      var infoWindow = new google.maps.InfoWindow({
+        content:'<h1 style="font-size:10px;">48082, MI</h1>'
+      });
+
+      marker.addListener('click', function(){
+        infoWindow.open(map, marker);
+      });
+      
+
+      // Array of markers
+      var markers = [
+        {
+          coords:{lat:42.4969805,lng:-82.8888054},
+          content:'<p style="font-size:10px;">Saint Clair Shores, MI</p>'
+        }
+      ];
+
+      // Loop through markers
+      for(var i = 0;i < markers.length;i++){
+        // Add marker
+        addMarker(markers[i]);
+      }
+
+      // Add Marker Function
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          //icon:props.iconImage
+        });
+
+        // Check for customicon
+        if(props.iconImage){
+          // Set icon image
+          marker.setIcon(props.iconImage);
+        }
+
+        // Check content
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+        }
+      }
+    }</script>
 
 </body>
 
