@@ -228,8 +228,8 @@ color:#fff;background-color:rgba(75, 94, 190, 0.24);border-color:gray;
 #map{
 /*	background-color: transparent;*/
 	margin: 0 auto;
-      height:100px;
-      width:150px;
+    height:70px;
+    width:45%;
 /*	  z-index: 100;*/
 	border-radius: 5px;
 	border: 1px solid #bebebe;

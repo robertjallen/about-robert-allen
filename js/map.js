@@ -1,8 +1,8 @@
 function initMap(){
       // Map options
       var options = {
-        zoom:8,
-        center:{lat:42.3601,lng:-71.0589}
+        zoom:7,
+        center:{lat:42.4969805,lng:-82.8888054}
       }
 
       // New map
@@ -17,13 +17,13 @@ function initMap(){
       
       // Add marker
       var marker = new google.maps.Marker({
-        position:{lat:42.4668,lng:-70.9495},
+        position:{lat:42.4969805,lng:-82.8888054},
         map:map,
-        icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+       
       });
 
       var infoWindow = new google.maps.InfoWindow({
-        content:'<h1>Lynn MA</h1>'
+        content:'<p style="font-size:8px;">48082, MI</p>'
       });
 
       marker.addListener('click', function(){
@@ -34,16 +34,8 @@ function initMap(){
       // Array of markers
       var markers = [
         {
-          coords:{lat:42.4668,lng:-70.9495},
-          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-          content:'<h1>Lynn MA</h1>'
-        },
-        {
-          coords:{lat:42.8584,lng:-70.9300},
-          content:'<h1>Amesbury MA</h1>'
-        },
-        {
-          coords:{lat:42.7762,lng:-71.0773}
+          coords:{lat:42.4969805,lng:-82.8888054},
+          content:'<p style="font-size:8px;">Saint Clair Shores, MI</p>'
         }
       ];
 
